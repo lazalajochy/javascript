@@ -6,4 +6,4 @@ function logsquare(num){
     console.log(square(num))
 }
 
-logsquare(5);
+logsquare(10);
