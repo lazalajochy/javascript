@@ -5,10 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <script src="./basic/callstack.js"></script> -->
-    <script src="./basic/timeout.js"></script>
+    <!-- <script src="./basic/timeout.js"></script> -->
+    <script defer src="./basic/bloocking.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="container">
+        <button onclick="clicks()">Click me!</button>
+        <p id="number-clicks">Numbers of clicks: 0</p>
+        <button onclick="slow()">Slow Operation</button>
+    </div>
+    <div class="container" id="content"></div>
 </body>
 </html>
