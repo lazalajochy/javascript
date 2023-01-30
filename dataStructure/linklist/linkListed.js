@@ -1,61 +1,26 @@
-class Node{
-    constructor(value){
-        this.value = value;
-        this.next = null;
-    }
+function List(){
+    this.head = null;
 }
 
-class LinkList{
-    constructor(){
-        this.head = null;
-        this.size = 0;
-    }
+function Node(value){
+    this.value = value;
+    this.next = null;
+}
 
-    isEmpty = () => {
-        return this.size === 0;
-    }
-
-    getSize = () => {
-        return this.size;
-    }
-
-    prepend = (value) => {
-        const node = new Node(value)
-        if(this.isEmpty()){
-            this.head = node;
-        }else{
-            node.next = this.head;
-            this.head = node;
+List.prototype.add = function(value){
+    if(this.head === null) this.head = new Node(value)
+    else{
+        let refe = this.head;
+        while(refe.next !== null){
+            refe = refe.next
         }
-        this.size++;
-    }
-
-    print = () => {
-        let listView = '';
-        if(this.isEmpty()){
-            return 'is empty'
-        }else{
-            let curr = this.head;
-           
-            while (curr) {
-                listView += `${curr.value} => `
-                curr = curr.next;
-                
-            }
-          
-        }
-        return listView
+        refe.next = new Node(value)
     }
 }
 
+let list = new List();
 
-const list = new LinkList()
-
-for(let i = 1; i <= 5; i++){
-    list.prepend(i)
-}
-
-
-console.log(list.isEmpty());
-console.log(list.getSize());
-console.log(list.print())
+list.add(1);
+list.add(2);
+list.add(3);
+list.add(4);
