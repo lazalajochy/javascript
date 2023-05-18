@@ -5,7 +5,7 @@ class OpendedClosed{
         return x + y;
     };
 
-    //the second method is getMulti of the values, which are x and y, so the second methos was added  without modify the 
+    //the second method is getMulti of the values, which are x and y, so the second method was added  without modify the 
     //previous method getSum
 
     getMulti = (x, y) => {
