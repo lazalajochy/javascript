@@ -8,7 +8,7 @@ El Principio de Responsabilidad Única (SRP, por sus siglas en inglés) es uno d
 
 Un ejemplo sencillo en JavaScript podría ser un programa que maneja tanto la lectura de un archivo como la impresión de su contenido. Sin embargo, este ejemplo no sigue el principio de responsabilidad única. Aquí tienes una implementación incorrecta:
 
-```
+```javascript
 class FileManager {
   constructor(fileName) {
     this.fileName = fileName;
@@ -33,7 +33,7 @@ En este ejemplo, la clase FileManager tiene dos responsabilidades: leer desde un
 Una implementación que sigue el principio de responsabilidad única sería dividir estas responsabilidades en clases separadas. Aquí tienes un ejemplo corregido:
 
 
-```
+```javascript
 class FileReader {
   constructor(fileName) {
     this.fileName = fileName;
