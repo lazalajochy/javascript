@@ -6,7 +6,7 @@ Un diseño que sigue el OCP permite que las nuevas funcionalidades se añadan co
 
 # Ejemplo mal implementado (violación del OCP):
 Supongamos que tienes un sistema de formas geométricas con un método para calcular el área de cada forma. Si decides agregar una nueva forma, digamos un triángulo, en una implementación que no sigue el OCP, podrías terminar modificando la clase existente para agregar esta funcionalidad.
-```
+```javascript
 class Shape {
   // ...
 }
@@ -39,7 +39,7 @@ En este caso, cuando se desea agregar una nueva forma, como el triángulo, es ne
 En un diseño que sigue el OCP, se permiten extensiones sin modificar el código base. Esto se puede lograr mediante el uso de abstracciones y la implementación de patrones como el patrón "Strategy" o el uso de interfaces.
 
 
-```
+```javascript
 class Shape {
   constructor(areaCalculator) {
     this.areaCalculator = areaCalculator;
