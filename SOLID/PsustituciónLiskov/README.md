@@ -8,7 +8,7 @@ En términos más simples, una subclase debe ser un reemplazo válido de su clas
 
 Supongamos que tienes una jerarquía de clases para figuras geométricas y tienes un método para calcular el área. En este ejemplo, una clase derivada, Square, extiende la clase base Rectangle.
 
-```
+``` javascript
 class Rectangle {
   constructor(width, height) {
     this.width = width;
@@ -40,7 +40,7 @@ class Square extends Rectangle {
   }
 }
 
-```
+``` 
 En este caso, la clase Square hereda de Rectangle, pero en la implementación de Square, los métodos setWidth y setHeight violan el comportamiento esperado. Estos métodos deberían ajustar el ancho y el alto de manera independiente en un Rectangle, pero en el caso de un Square, estos métodos rompen la relación entre ancho y alto que debería existir en un cuadrado.
 
 # Ejemplo bien implementado (siguiendo el LSP):
