@@ -8,7 +8,7 @@ El ISP busca evitar interfaces "grasas" que contengan demasiados métodos, ya qu
 
 Supongamos que tienes una interfaz llamada Worker que contiene métodos para trabajar y comer:
 
-```
+```javascript
 interface Worker {
   work();
   eat();
@@ -16,7 +16,7 @@ interface Worker {
 ```
 Luego, tienes dos clases, OfficeWorker y FactoryWorker, que implementan la interfaz Worker. Sin embargo, la clase FactoryWorker no necesita el método eat, ya que los trabajadores de fábrica no tienen tiempo designado para comer.
 
-```
+```javascript
 class OfficeWorker implements Worker {
   work() {
     // Realizar trabajo de oficina
@@ -46,7 +46,7 @@ En este caso, la clase FactoryWorker está forzada a implementar un método que 
 
 Para seguir el ISP, se pueden crear interfaces más específicas para cada clase y sus necesidades. En este ejemplo, creamos interfaces separadas para las acciones de trabajo y comer:
 
-```
+```javascript
 interface Workable {
   work();
 }
