@@ -15,7 +15,7 @@ En resumen, el DIP busca invertir la dirección de las dependencias, de modo que
 
 Supongamos que tienes una clase NotificationService que envía notificaciones por correo electrónico:
 
-```
+```javascript
 class EmailService {
   sendEmail(message, recipient) {
     // Código para enviar un correo electrónico
@@ -40,7 +40,7 @@ En este ejemplo, la clase NotificationService depende directamente de EmailServi
 
 Para seguir el DIP, las dependencias deben invertirse y las abstracciones deben introducirse para reducir el acoplamiento. Esto se puede lograr mediante el uso de interfaces o clases base abstractas.
 
-```
+```javascript
 class NotificationSender {
   sendNotification(message, recipient) {}
 }
