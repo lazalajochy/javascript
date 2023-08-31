@@ -60,24 +60,24 @@ if (true) {
 # Tipo de datos
 En JavaScript, hay varios tipos de datos que puedes utilizar para representar diferentes tipos de información. Aquí tienes una lista de los tipos de datos más comunes junto con ejemplos de cada uno:
 
-Número (Number): Representa valores numéricos, ya sean enteros o de punto flotante.
++ Número (Number): Representa valores numéricos, ya sean enteros o de punto flotante.
 ```javascript
 let edad = 25; // Entero
 let precio = 99.99; // Punto flotante
 ```
 
-Cadena de texto (String): Representa secuencias de caracteres, como palabras o frases.
++ Cadena de texto (String): Representa secuencias de caracteres, como palabras o frases.
 ```javascript
 let nombre = "Ana";
 let frase = "Hola, ¿cómo estás?";
 ```
 
-Booleano (Boolean): Representa un valor verdadero (true) o falso (false).
++ Booleano (Boolean): Representa un valor verdadero (true) o falso (false).
 ```javascript
 let esMayorDeEdad = true;
 let esEstudiante = false;
 ```
-Objeto (Object): Representa una colección de propiedades y valores, que pueden ser cualquier tipo de datos, incluyendo otros objetos.
++ Objeto (Object): Representa una colección de propiedades y valores, que pueden ser cualquier tipo de datos, incluyendo otros objetos.
 ```javascript
 let persona = {
   nombre: "Carlos",
@@ -85,28 +85,28 @@ let persona = {
   esEstudiante: false
 };
 ```
-Nulo (Null): Representa la ausencia intencionada de un valor o una referencia a un objeto inexistente.
++ Nulo (Null): Representa la ausencia intencionada de un valor o una referencia a un objeto inexistente.
 ```javascript
 let valorNulo = null;
 ```
 
-Arreglo (Array): Representa una colección ordenada de elementos, que pueden ser de cualquier tipo de datos, incluyendo otros arreglos u objetos.
++ Arreglo (Array): Representa una colección ordenada de elementos, que pueden ser de cualquier tipo de datos, incluyendo otros arreglos u objetos.
 
 ```javascript
 let numeros = [1, 2, 3, 4, 5];
 let nombres = ["Juan", "María", "Luis"];
 ```
 
-Indefinido (Undefined): Representa una variable que se ha declarado pero aún no se le ha asignado ningún valor.
++ Indefinido (Undefined): Representa una variable que se ha declarado pero aún no se le ha asignado ningún valor.
 ```javascript
 let variableIndefinida;
 ```
-Símbolo (Symbol): Introducido en ES6, representa un valor único que se puede utilizar como clave en objetos para evitar colisiones de nombres de propiedades.
++ Símbolo (Symbol): Introducido en ES6, representa un valor único que se puede utilizar como clave en objetos para evitar colisiones de nombres de propiedades.
 ```javascript
 const simbolo = Symbol("descripcion");
 ```
 
-BigInt: Introducido en ES11, representa números enteros grandes que no pueden ser representados por el tipo de dato Number.
++ BigInt: Introducido en ES11, representa números enteros grandes que no pueden ser representados por el tipo de dato Number.
 ```javascript
 const numeroGrande = 1234567890123456789012345678901234567890n;
 ```
