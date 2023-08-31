@@ -3,22 +3,17 @@
 JavaScript (JS) es un lenguaje de programación ampliamente utilizado en el desarrollo web y en entornos de programación del lado del cliente. Fue creado originalmente como un lenguaje de secuencias de comandos para hacer que las páginas web fueran interactivas en los navegadores web. A lo largo del tiempo, JavaScript ha evolucionado y se ha convertido en un lenguaje de programación completo, capaz de realizar una variedad de tareas en diferentes contextos.
 
 # Características clave de JavaScript
-# Lenguaje interpretado
-JavaScript es un lenguaje interpretado, lo que significa que el código se ejecuta directamente por el motor del navegador o del entorno en lugar de ser compilado en código de máquina antes de la ejecución.
++ Lenguaje interpretado: JavaScript es un lenguaje interpretado, lo que significa que el código se ejecuta directamente por el motor del navegador o del entorno en lugar de ser compilado en código de máquina antes de la ejecución.
 
-# Lado del cliente y del servidor
-En el contexto del desarrollo web, JavaScript se ejecuta en el lado del cliente (navegador) para manipular elementos del DOM, interactuar con APIs web y crear experiencias interactivas. Además, también se puede utilizar en el lado del servidor a través de plataformas como Node.js.
++ Lado del cliente y del servidor: En el contexto del desarrollo web, JavaScript se ejecuta en el lado del cliente (navegador) para manipular elementos del DOM, interactuar con APIs web y crear experiencias interactivas. Además, también se puede utilizar en el lado del servidor a través de plataformas como Node.js.
 
-# Lenguaje de scripting
-JavaScript es conocido como un lenguaje de scripting debido a su capacidad para escribir scripts que controlan la ejecución de acciones en una aplicación o página web.
++ Lenguaje de scripting: JavaScript es conocido como un lenguaje de scripting debido a su capacidad para escribir scripts que controlan la ejecución de acciones en una aplicación o página web.
 
-# Dinámico y débilmente tipado
-JavaScript es dinámico, lo que significa que las variables pueden cambiar de tipo durante la ejecución del programa. También es débilmente tipado, lo que permite operaciones entre diferentes tipos de datos sin requerir conversiones explícitas.
++ Dinámico y débilmente tipado: JavaScript es dinámico, lo que significa que las variables pueden cambiar de tipo durante la ejecución del programa. También es débilmente tipado, lo que permite operaciones entre diferentes tipos de datos sin requerir conversiones explícitas.
 
-# Manipulación del DOM
-JavaScript es ampliamente utilizado para manipular el Document Object Model (DOM) de una página web, lo que permite agregar, modificar o eliminar elementos y contenido en tiempo real.
++ Manipulación del DOM: JavaScript es ampliamente utilizado para manipular el Document Object Model (DOM) de una página web, lo que permite agregar, modificar o eliminar elementos y contenido en tiempo real.
 
-# Programación asíncrona
++ Programación asíncrona: 
 JavaScript permite la ejecución asíncrona mediante callbacks, promesas y la sintaxis async/await. Esto es fundamental para manejar operaciones lentas como solicitudes a servidores y garantizar que las aplicaciones web sigan siendo receptivas
 
 # Variables
@@ -37,11 +32,11 @@ Tipos de Variables en JavaScript:
 
 En JavaScript, hay tres formas principales de declarar variables:
 
-var: Fue la forma tradicional de declarar variables en JavaScript. Sin embargo, tiene algunas características de alcance que pueden llevar a comportamientos inesperados y se recomienda evitar su uso en favor de "let" y "const".
++ var: Fue la forma tradicional de declarar variables en JavaScript. Sin embargo, tiene algunas características de alcance que pueden llevar a comportamientos inesperados y se recomienda evitar su uso en favor de "let" y "const".
 
-let: Introducido en ES6 (ECMAScript 2015), "let" permite declarar variables con alcance de bloque. Esto significa que una variable declarada con "let" solo es accesible dentro del bloque en el que se declara.
++ let: Introducido en ES6 (ECMAScript 2015), "let" permite declarar variables con alcance de bloque. Esto significa que una variable declarada con "let" solo es accesible dentro del bloque en el que se declara.
 
-const: También introducido en ES6, "const" se utiliza para declarar variables cuyo valor no cambiará después de su asignación inicial. Las variables "const" también tienen alcance de bloque.
++ const: También introducido en ES6, "const" se utiliza para declarar variables cuyo valor no cambiará después de su asignación inicial. Las variables "const" también tienen alcance de bloque.
 
 Ejemplo de uso de let y const
 
@@ -122,19 +117,19 @@ Los datos primitivos son valores simples que representan una única pieza de inf
 
 Los tipos de datos primitivos en JavaScript son:
 
-Número (Number)
++ Número (Number)
 
-Cadena de texto (String)
++ Cadena de texto (String)
 
-Booleano (Boolean)
++ Booleano (Boolean)
 
-Símbolo (Symbol)
++ Símbolo (Symbol)
 
-Indefinido (Undefined)
++ Indefinido (Undefined)
 
-Nulo (Null)
++ Nulo (Null)
 
-BigInt (Introducido en ES11)
++ BigInt (Introducido en ES11)
 
 Ejemplo de Datos Primitivos:
 
@@ -154,17 +149,17 @@ Los datos no primitivos, también conocidos como tipos de referencia, son más c
 
 Los tipos de datos no primitivos en JavaScript son:
 
-Objetos (Object)
++ Objetos (Object)
 
-Arreglos (Array)
++ Arreglos (Array)
 
-Funciones
++ Funciones
 
-Fechas (Date)
++ Fechas (Date)
 
-Regulares (RegExp)
++ Regulares (RegExp)
 
-Todos los tipos de datos definidos por el usuario
++ Todos los tipos de datos definidos por el usuario
 
 Ejemplo de Datos No Primitivos:
 
@@ -180,8 +175,18 @@ arreglo2.push(4);
 console.log(arreglo1); // Salida: [1, 2, 3, 4], porque ambos apuntan al mismo arreglo
 ```
 
+# Operadores
 
+Los operadores en JavaScript son símbolos o palabras reservadas que permiten realizar operaciones en variables y valores. Los operadores pueden ser aritméticos, de asignación, de comparación, lógicos y más
 
+Operadores Aritméticos:
+
+Estos operadores se utilizan para realizar cálculos matemáticos.
+
++ (Suma): Suma dos valores.
+```javascript
+let suma = 5 + 3; // Resultado: 8
+```
 
 
 
