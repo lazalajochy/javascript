@@ -187,6 +187,33 @@ Estos operadores se utilizan para realizar cálculos matemáticos.
 ```javascript
 let suma = 5 + 3; // Resultado: 8
 ```
++ (Resta): Resta un valor de otro.
+```javascript
+  let resta = 10 - 4; // Resultado: 6
+```
 
++ (Multiplicación): Multiplica dos valores.
+```javascript
+let multiplicacion = 2 * 3; // Resultado: 6
+```
++ (División): Divide un valor entre otro.
+```javascript
+let division = 10 / 2; // Resultado: 5
+```
++  (Módulo): Devuelve el resto de la división entre dos valores.
+```javascript
+let modulo = 10 % 3; // Resultado: 1 (resto de 10 dividido por 3)
+```
 
+# Operadores de Asignación:
+Estos operadores se utilizan para asignar valores a variables.
 
++ (Asignación): Asigna el valor de la derecha a la variable de la izquierda.
+```javascript
+let x = 5; // Asigna 5 a la variable x
+```
++ (Asignación de suma): Incrementa el valor de la variable con el valor a la derecha y luego asigna el resultado a la variable
+```javascript
+let y = 10;
+y += 3; // Incrementa y en 3, y luego asigna: y = 13
+```
