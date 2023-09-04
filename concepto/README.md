@@ -371,3 +371,63 @@ console.log(coche['año']); // Acceder a la propiedad año utilizando notación 
 coche.color = "Azul"; // Agregar una nueva propiedad color al objeto
 console.log(coche.color); // Acceder a la nueva propiedad color
 ```
+
+# Scopes y ámbito de las variables (var, let, const).
+
+Los scopes y el ámbito de las variables son conceptos importantes en JavaScript que determinan dónde y cuándo se puede acceder a una variable. JavaScript tiene tres tipos principales de ámbito de variables, asociados a var, let y const. Aquí tienes una explicación de cada uno:
+
++ Ámbito de variables con var:  Las variables declaradas con var tienen un ámbito de función o un ámbito global, dependiendo de si se declaran dentro de una función o fuera de ella
+
+```javascript
+function ejemploVar() {
+  if (true) {
+    var x = 10; // Ámbito de función
+  }
+  console.log(x); // Se puede acceder a x aquí
+}
+
+ejemploVar();
+console.log(x); // También se puede acceder a x aquí (global)
+```
++ Notas:
+
+Las variables var declaradas dentro de bloques de código, como if o for, tienen un ámbito de función.
+
+Las variables var declaradas fuera de cualquier función tienen un ámbito global.
+
++ Ámbito de variables con let:  Las variables declaradas con let tienen un ámbito de bloque, lo que significa que solo están disponibles dentro del bloque de código más cercano en el que se declaran.
+
+```javascript
+function ejemploLet() {
+  if (true) {
+    let y = 20; // Ámbito de bloque
+  }
+  console.log(y); // Esto arrojará un error porque y no está definida aquí
+}
+
+ejemploLet();
+```
+
++ Notas:
+
+Las variables let tienen un ámbito más restrictivo que las variables var, lo que evita problemas como la "hoisting" (elevación) que ocurre con var.
+
+Las variables let son ideales cuando deseas limitar la visibilidad de una variable a un bloque específico.
+
+
++ Ámbito de variables con const: Las variables declaradas con const también tienen un ámbito de bloque, al igual que las variables let. Sin embargo, una vez que se les asigna un valor, ese valor no puede ser reasignado.
+
+```javascript
+function ejemploConst() {
+  const z = 30; // Ámbito de bloque
+  z = 40; // Esto arrojará un error porque no se puede reasignar una constante
+}
+
+ejemploConst();
+```
+
++ Notas:
+
+Las variables const son útiles cuando deseas que una variable tenga un valor constante y no cambie durante la ejecución del programa.
+
+Debes asignar un valor a una variable const cuando la declaras, ya que no se pueden declarar y luego asignar en diferentes momento
