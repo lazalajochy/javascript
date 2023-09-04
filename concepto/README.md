@@ -217,3 +217,34 @@ let x = 5; // Asigna 5 a la variable x
 let y = 10;
 y += 3; // Incrementa y en 3, y luego asigna: y = 13
 ```
++ Asignación de resta (-=): Disminuye el valor de la variable con el valor a la derecha y luego asigna el resultado a la variable.
+
+```javascript
+let z = 8;
+z -= 2; // Disminuye z en 2, y luego asigna: z = 6
+```
++ Asignación de multiplicación (*=): Multiplica el valor de la variable con el valor a la derecha y luego asigna el resultado a la variable.
+
+```javascript
+ let a = 4;
+a *= 5; // Multiplica a por 5, y luego asigna: a = 20
+```
+
++ Asignación de división (/=): Divide el valor de la variable con el valor a la derecha y luego asigna el resultado a la variable.
+
+```javascript
+let b = 16;
+b /= 4; // Divide b por 4, y luego asigna: b = 4
+```
++ Asignación de módulo (%=): Calcula el módulo del valor de la variable con el valor a la derecha y luego asigna el resultado a la variable.
+
+```javascript
+let c = 10;
+c %= 3; // Calcula el módulo de c con 3, y luego asigna: c = 1
+```
++ Asignación de exponenciación (**=): Eleva el valor de la variable a la potencia del valor a la derecha y luego asigna el resultado a la variable. (Este operador se introdujo en ECMAScript 2016).
+
+```javascript
+let d = 2;
+d **= 3; // Eleva d a la potencia de 3, y luego asigna: d = 8
+```
