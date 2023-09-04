@@ -467,3 +467,7 @@ También puedes asignar manejadores de eventos directamente en HTML utilizando a
 ```javascript
 <button id="miBoton" onclick="alert('¡Hiciste clic en el botón!')">Clic aquí</button>
 ```
+
+Además del método addEventListener, puedes utilizar removeEventListener para eliminar manejadores de eventos si ya no son necesarios.
+
+El manejo de eventos es esencial para crear interacciones interactivas y dinámicas en aplicaciones web y permite a los desarrolladores responder a las acciones del usuario de manera eficaz.
