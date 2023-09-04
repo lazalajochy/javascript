@@ -431,3 +431,31 @@ ejemploConst();
 Las variables const son útiles cuando deseas que una variable tenga un valor constante y no cambie durante la ejecución del programa.
 
 Debes asignar un valor a una variable const cuando la declaras, ya que no se pueden declarar y luego asignar en diferentes momento
+
+
+# Eventos
+En el contexto del desarrollo web, un evento es una acción o suceso que ocurre en un elemento HTML, como hacer clic en un botón, mover el mouse sobre una imagen, presionar una tecla en el teclado, entre otros. Los eventos permiten que el código JavaScript responda a las acciones del usuario o a cambios en la página web.
+
+
+Ejemplos de eventos comunes incluyen:
+
++ click: Ocurre cuando se hace clic en un elemento.
+  
++ mouseover y mouseout: Ocurren cuando el mouse se mueve sobre un elemento y sale de él, respectivamente.
+  
++ keydown y keyup: Ocurren cuando se presiona o se suelta una tecla en el teclado.
+  
++ submit: Ocurre cuando se envía un formulario.
+
+# Manejo de eventos en JavaScript:
+
+Para manejar eventos en JavaScript, puedes utilizar el método addEventListener. Este método se utiliza para asignar una función (manejador de eventos) a un elemento HTML específico y un evento determinado. Cuando ocurre el evento, la función se ejecuta.
+
+```javascript
+const boton = document.getElementById('miBoton');
+
+// Agregar un manejador de eventos para el evento 'click'
+boton.addEventListener('click', function() {
+  alert('¡Hiciste clic en el botón!');
+});
+```
