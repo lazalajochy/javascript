@@ -307,3 +307,67 @@ do {
   contador++;
 } while (contador < 5);
 ```
+
+# Funciones básicas y declaración de funciones.
+
++ Las funciones básicas en JavaScript son fragmentos de código reutilizables que realizan tareas específicas. Puedes definir una función utilizando la palabra clave function.
+
+```javascript
+function saludar(nombre) {
+  console.log(`Hola, ${nombre}!`);
+}
+
+saludar("Juan"); // Llama a la función para saludar a Juan
+```
+En este ejemplo, hemos definido una función llamada saludar que toma un parámetro nombre y muestra un saludo personalizado en la consola.
+
++ Las declaraciones de funciones son otra forma de definir funciones en JavaScript, donde utilizamos la palabra clave function seguida de un nombre de función.
+
+```javascript
+function suma(a, b) {
+  return a + b;
+}
+
+const resultado = suma(5, 3); // Llama a la función para sumar 5 y 3
+console.log(resultado); // Muestra el resultado en la consola
+```
+
+En este ejemplo, hemos declarado una función llamada suma que toma dos parámetros, a y b, y devuelve la suma de esos dos valores. Luego, llamamos a la función suma con los argumentos 5 y 3 y almacenamos el resultado en la variable resultado.
+
+Tanto las funciones básicas como las declaraciones de funciones son fundamentales en JavaScript para encapsular lógica, reutilizar código y modularizar programas. Las funciones declaradas con la palabra clave function se pueden utilizar antes de su definición debido al concepto de "hoisting" en JavaScript, mientras que las funciones básicas no tienen esa ventaja y deben declararse antes de su uso.
+
+# Objetos y propiedades.
+
+Un objeto en JavaScript es una colección de pares clave-valor, donde las claves son cadenas (o símbolos) que actúan como nombres para las propiedades y los valores pueden ser de cualquier tipo de datos, como números, cadenas, funciones u otros objetos. Los objetos se utilizan para modelar y organizar datos de manera estructurada.
+
+```javascript
+const persona = {
+  nombre: "Juan",
+  edad: 30,
+  ciudad: "Madrid",
+  saludar: function () {
+    console.log(`Hola, soy ${this.nombre} y tengo ${this.edad} años.`);
+  },
+};
+
+console.log(persona.nombre); // Acceder a la propiedad nombre del objeto
+persona.saludar(); // Llamar al método saludar del objeto
+```
+
+En este ejemplo, hemos creado un objeto llamado persona que tiene propiedades como nombre, edad y ciudad, así como un método saludar que muestra un saludo personalizado.
+
++ Las propiedades son los miembros de un objeto y representan datos relacionados con ese objeto. Pueden ser accesadas y modificadas utilizando la notación de punto (por ejemplo, objeto.propiedad) o la notación de corchetes (por ejemplo, objeto['propiedad']).
+
+```javascript
+const coche = {
+  marca: "Toyota",
+  modelo: "Corolla",
+  año: 2020,
+};
+
+console.log(coche.marca); // Acceder a la propiedad marca utilizando notación de punto
+console.log(coche['año']); // Acceder a la propiedad año utilizando notación de corchetes
+
+coche.color = "Azul"; // Agregar una nueva propiedad color al objeto
+console.log(coche.color); // Acceder a la nueva propiedad color
+```
