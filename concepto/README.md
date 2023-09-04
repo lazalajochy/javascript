@@ -248,3 +248,62 @@ c %= 3; // Calcula el módulo de c con 3, y luego asigna: c = 1
 let d = 2;
 d **= 3; // Eleva d a la potencia de 3, y luego asigna: d = 8
 ```
+
+# Estructuras de control
+
++ La estructura if...else permite tomar decisiones basadas en una condición. Si la condición es verdadera, se ejecuta el bloque de código dentro de if, de lo contrario, se ejecuta el bloque de código dentro de else.
+
+```javascript
+let edad = 18;
+
+if (edad >= 18) {
+  console.log("Eres mayor de edad");
+} else {
+  console.log("Eres menor de edad");
+}
+```
+
++ switch se utiliza para tomar decisiones múltiples en función del valor de una expresión. Se comparan casos con el valor de la expresión y se ejecuta el bloque de código correspondiente al caso coincidente.
+
+```javascript
+let dia = "Lunes";
+
+switch (dia) {
+  case "Lunes":
+    console.log("Hoy es el primer día de la semana");
+    break;
+  case "Martes":
+    console.log("Hoy es martes");
+    break;
+  default:
+    console.log("Es otro día de la semana");
+}
+```
++ El bucle for se utiliza para ejecutar un bloque de código varias veces. Tiene tres partes: la inicialización, la condición de salida y la expresión de actualización, lo que permite un control preciso del número de iteraciones.
+
+```javascript
+for (let i = 0; i < 5; i++) {
+  console.log("Iteración #" + i);
+}
+```
++ El bucle while se utiliza para ejecutar un bloque de código mientras una condición sea verdadera. Se verifica la condición antes de cada iteración.
+
+```javascript
+let contador = 0;
+
+while (contador < 5) {
+  console.log("Iteración #" + contador);
+  contador++;
+}
+```
+
++ La estructura do...while se utiliza para ejecutar un bloque de código al menos una vez y luego repetirlo mientras una condición sea verdadera. A diferencia de while, la condición se verifica después de ejecutar el bloque de código, lo que garantiza que el bloque se ejecute al menos una vez, incluso si la condición inicialmente es falsa.
+
+```javascript
+let contador = 0;
+
+do {
+  console.log("Iteración #" + contador);
+  contador++;
+} while (contador < 5);
+```
