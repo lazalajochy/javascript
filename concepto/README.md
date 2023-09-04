@@ -459,3 +459,11 @@ boton.addEventListener('click', function() {
   alert('¡Hiciste clic en el botón!');
 });
 ```
+
+En el ejemplo anterior, hemos seleccionado un elemento HTML con el id "miBoton" y luego hemos agregado un manejador de eventos para el evento 'click'. Cuando el botón se hace clic, se ejecutará la función anónima y mostrará un mensaje de alerta.
+
+También puedes asignar manejadores de eventos directamente en HTML utilizando atributos como onclick, aunque se considera una práctica menos moderna y más limitada.
+
+```javascript
+<button id="miBoton" onclick="alert('¡Hiciste clic en el botón!')">Clic aquí</button>
+```
