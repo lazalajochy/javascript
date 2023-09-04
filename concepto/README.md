@@ -471,3 +471,84 @@ También puedes asignar manejadores de eventos directamente en HTML utilizando a
 Además del método addEventListener, puedes utilizar removeEventListener para eliminar manejadores de eventos si ya no son necesarios.
 
 El manejo de eventos es esencial para crear interacciones interactivas y dinámicas en aplicaciones web y permite a los desarrolladores responder a las acciones del usuario de manera eficaz.
+
+# DOM (Document Object Model) y manipulación del contenido HTML/CSS.
+
+El DOM (Document Object Model) es una representación jerárquica y estructurada de un documento HTML o XML en forma de un árbol de objetos. Cada elemento, atributo y contenido de un documento se convierte en un objeto en el DOM, lo que permite a los desarrolladores acceder y manipular el contenido HTML y CSS de una página web de manera programática. Aquí tienes una introducción a cómo funciona el DOM y cómo puedes manipular el contenido HTML/CSS:
+
++ Estructura del DOM:
+
+El DOM se organiza en una estructura de árbol, donde cada elemento HTML se representa como un nodo en el árbol. La raíz del árbol es el objeto document, que representa todo el documento HTML.
+
+Elementos: Los elementos HTML como ```<div>, <p>, <a>,``` etc., son representados como nodos en el árbol DOM.
+
+Atributos: Los atributos de los elementos se convierten en propiedades de los nodos en el DOM. Por ejemplo, el atributo id se convierte en la propiedad id del nodo.
+
+Texto y contenido: El texto y el contenido dentro de los elementos HTML se representan como nodos de texto y elementos secundarios en el árbol DOM.
+
++ Manipulación del DOM:
+
+Puedes utilizar JavaScript para acceder y manipular el contenido HTML/CSS a través del DOM. Aquí hay algunas operaciones comunes:
+
+Seleccionar elementos:
+
+Utiliza métodos como getElementById, getElementsByClassName, getElementsByTagName, querySelector, y querySelectorAll para seleccionar elementos en el DOM.
+
+```javascript
+const miElemento = document.getElementById("miId");
+const elementosParrafo = document.querySelectorAll("p");
+```
+
+
+Cambiar el contenido:
+
+Puedes cambiar el contenido de un elemento modificando sus propiedades de texto o HTML.
+
+```javascript
+miElemento.textContent = "Nuevo texto";
+miElemento.innerHTML = "<strong>Texto en negrita</strong>";
+```
+
+Modificar atributos:
+
+Puedes cambiar los atributos de un elemento accediendo a sus propiedades.
+
+```javascript
+miElemento.src = "nueva-imagen.jpg";
+```
+
+Agregar y eliminar elementos:
+
+Puedes crear nuevos elementos y agregarlos al DOM o eliminar elementos existentes.
+
+```javascript
+const nuevoParrafo = document.createElement("p");
+nuevoParrafo.textContent = "Nuevo párrafo";
+document.body.appendChild(nuevoParrafo);
+
+const elementoAEliminar = document.getElementById("elementoEliminar");
+elementoAEliminar.remove();
+```
+
+Cambiar estilos CSS:
+
+Puedes modificar los estilos CSS de un elemento accediendo a sus propiedades de estilo.
+
+```javascript
+miElemento.style.color = "blue";
+miElemento.style.backgroundColor = "yellow";
+```
+
+
+Manejar eventos:
+
+Puedes asignar manejadores de eventos a elementos para responder a acciones del usuario, como clics y movimientos de ratón.
+
+```javascript
+miElemento.addEventListener("click", function() {
+  alert("Haz hecho clic en el elemento.");
+});
+```
+
+La manipulación del DOM es esencial para crear interacciones dinámicas y modificar el contenido y la apariencia de una página web. Sin embargo, es importante usarla con cuidado para mantener un código limpio y eficiente.
+
