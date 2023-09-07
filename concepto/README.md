@@ -676,3 +676,140 @@ console.log(objeto.obtenerValor()); // undefined
 ```
 
 En resumen, las funciones flecha son una forma más concisa de escribir funciones en JavaScript y son especialmente útiles cuando se desea mantener el valor de this del contexto circundante. Por otro lado, las funciones normales son más versátiles y pueden ser necesarias en situaciones donde se requiere un valor de this dinámico o se necesita un cuerpo de función más complejo.
+
+
+# Programación orientada a objetos (clases, herencia, prototipos, polimorfismo, encapsulamiento, abstracción).
+
+clases
+
+Una clase es un plano o plantilla para crear objetos. Define las propiedades (atributos) y los comportamientos (métodos) que los objetos tendrán.
+
+```javascript
+class Animal {
+  constructor(nombre, especie) {
+    this.nombre = nombre;
+    this.especie = especie;
+  }
+
+  hacerSonido() {
+    console.log("Haciendo sonido...");
+  }
+}
+
+const perro = new Animal("Fido", "Canino");
+console.log(perro.nombre); // Fido
+perro.hacerSonido(); // Haciendo sonido...
+```
+
+Herencia
+
+La herencia es un mecanismo que permite que una clase (subclase) herede propiedades y métodos de otra clase (superclase). Esto promueve la reutilización del código y la creación de jerarquías de clases.
+
+```javascript
+class Mamifero {
+  constructor(nombre) {
+    this.nombre = nombre;
+  }
+
+  amamantar() {
+    console.log(`${this.nombre} está amamantando.`);
+  }
+}
+
+class Perro extends Mamifero {
+  ladrar() {
+    console.log(`${this.nombre} está ladrando.`);
+  }
+}
+
+const miPerro = new Perro("Fido");
+miPerro.amamantar(); // Fido está amamantando.
+miPerro.ladrar();    // Fido está ladrando.
+```
+
+Prototipo
+
+Los prototipos son un mecanismo fundamental en JavaScript que permite compartir propiedades y métodos entre objetos a través de un enlace prototípico.
+
+```javascript
+function Animal(nombre) {
+  this.nombre = nombre;
+}
+
+Animal.prototype.hacerSonido = function() {
+  console.log("Haciendo sonido...");
+};
+
+const perro = new Animal("Fido");
+console.log(perro.nombre); // Fido
+perro.hacerSonido(); // Haciendo sonido...
+```
+
+Polimorfismo
+
+ El polimorfismo permite que objetos de diferentes clases respondan de manera diferente a la misma llamada de método, siempre y cuando compartan una interfaz común.
+
+ ```javascript
+class Figura {
+  calcularArea() {
+    // Método genérico para calcular el área
+  }
+}
+
+class Circulo extends Figura {
+  constructor(radio) {
+    super();
+    this.radio = radio;
+  }
+
+  calcularArea() {
+    return Math.PI * this.radio * this.radio;
+  }
+}
+
+class Cuadrado extends Figura {
+  constructor(lado) {
+    super();
+    this.lado = lado;
+  }
+
+  calcularArea() {
+    return this.lado * this.lado;
+  }
+}
+
+const circulo = new Circulo(5);
+const cuadrado = new Cuadrado(4);
+
+console.log(circulo.calcularArea()); // 78.53981633974483
+console.log(cuadrado.calcularArea()); // 16
+```
+
+Encapsulamiento
+
+El encapsulamiento es el concepto de ocultar los detalles internos de un objeto y restringir el acceso directo a sus datos, permitiendo el acceso controlado a través de métodos públicos (getters y setters).
+
+
+```javascript
+class Persona {
+  constructor(nombre, edad) {
+    this.nombre = nombre;
+    this.edad = edad;
+  }
+
+  getNombre() {
+    return this.nombre;
+  }
+
+  setEdad(edad) {
+    if (edad >= 0) {
+      this.edad = edad;
+    }
+  }
+}
+
+const persona = new Persona("Juan", 30);
+console.log(persona.getNombre()); // Juan
+persona.setEdad(25);
+console.log(persona.edad); // 25
+```
