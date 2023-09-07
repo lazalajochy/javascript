@@ -552,3 +552,29 @@ miElemento.addEventListener("click", function() {
 
 La manipulación del DOM es esencial para crear interacciones dinámicas y modificar el contenido y la apariencia de una página web. Sin embargo, es importante usarla con cuidado para mantener un código limpio y eficiente.
 
+
+# Funciones avanzadas (cierres, funciones anidadas).
+
+Cierres (Closures)
+
+Un cierre es una función que tiene acceso a las variables de su entorno externo, incluso después de que esa función haya terminado de ejecutarse. Esto permite que las funciones conserven y "capturen" las variables de su entorno, lo que puede ser útil para mantener datos privados y crear funciones de fábrica.
+
+```javascript
+function crearContador() {
+  let contador = 0;
+
+  function incrementar() {
+    contador++;
+    console.log(contador);
+  }
+
+  return incrementar;
+}
+
+const miContador = crearContador();
+miContador(); // 1
+miContador(); // 2
+```
+
+En este ejemplo, crearContador devuelve una función interna incrementar, que conserva acceso a la variable contador incluso después de que crearContador haya terminado de ejecutarse.
+
