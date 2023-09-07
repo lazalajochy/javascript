@@ -812,3 +812,7 @@ console.log(persona.getNombre()); // Juan
 persona.setEdad(25);
 console.log(persona.edad); // 25
 ```
+
++ La abstracción
+
+Trata de simplificar la complejidad del mundo real modelando objetos del mundo real como objetos en un programa de computadora. Esto implica identificar las características esenciales de un objeto y representarlas en forma de atributos y métodos. La abstracción permite crear modelos más simples y comprensibles de sistemas complejos.
