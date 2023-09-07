@@ -618,7 +618,7 @@ Estas son las definiciones y ejemplos básicos de cierres y funciones anidadas e
 
 Las funciones normales y las funciones flecha (arrow functions) en JavaScript tienen diferencias clave en su sintaxis y en cómo manejan el valor de this.
 
-function
++ function
 
 Se definen utilizando la palabra clave function.
 
@@ -632,7 +632,7 @@ function suma(a, b) {
 }
 ```
 
-arrow function
++ arrow function
 
 Se definen utilizando la sintaxis () => {}.
 
@@ -643,8 +643,7 @@ Suelen ser más concisas y expresivas.
 ```javascript
 const suma = (a, b) => a + b;
 ```
-
-This en funciones
++ this en funciones
 
 Tienen su propio valor de this, que depende de cómo se llama la función.
 
@@ -662,7 +661,7 @@ console.log(objeto.obtenerValor()); // 42
 
 ```
 
-this en arrow function
++ this en arrow function
 
 No tienen su propio valor de this. En cambio, heredan el valor de this del contexto en el que se crearon.
 
@@ -680,7 +679,7 @@ En resumen, las funciones flecha son una forma más concisa de escribir funcione
 
 # Programación orientada a objetos (clases, herencia, prototipos, polimorfismo, encapsulamiento, abstracción).
 
-clases
++ clases
 
 Una clase es un plano o plantilla para crear objetos. Define las propiedades (atributos) y los comportamientos (métodos) que los objetos tendrán.
 
@@ -701,7 +700,7 @@ console.log(perro.nombre); // Fido
 perro.hacerSonido(); // Haciendo sonido...
 ```
 
-Herencia
++ Herencia
 
 La herencia es un mecanismo que permite que una clase (subclase) herede propiedades y métodos de otra clase (superclase). Esto promueve la reutilización del código y la creación de jerarquías de clases.
 
@@ -727,7 +726,7 @@ miPerro.amamantar(); // Fido está amamantando.
 miPerro.ladrar();    // Fido está ladrando.
 ```
 
-Prototipo
++ Prototipo
 
 Los prototipos son un mecanismo fundamental en JavaScript que permite compartir propiedades y métodos entre objetos a través de un enlace prototípico.
 
@@ -745,7 +744,7 @@ console.log(perro.nombre); // Fido
 perro.hacerSonido(); // Haciendo sonido...
 ```
 
-Polimorfismo
++ Polimorfismo
 
  El polimorfismo permite que objetos de diferentes clases respondan de manera diferente a la misma llamada de método, siempre y cuando compartan una interfaz común.
 
@@ -785,7 +784,7 @@ console.log(circulo.calcularArea()); // 78.53981633974483
 console.log(cuadrado.calcularArea()); // 16
 ```
 
-Encapsulamiento
++ Encapsulamiento
 
 El encapsulamiento es el concepto de ocultar los detalles internos de un objeto y restringir el acceso directo a sus datos, permitiendo el acceso controlado a través de métodos públicos (getters y setters).
 
