@@ -578,3 +578,42 @@ miContador(); // 2
 
 En este ejemplo, crearContador devuelve una función interna incrementar, que conserva acceso a la variable contador incluso después de que crearContador haya terminado de ejecutarse.
 
+
+Funciones Anidadas (Nested Functions):
+
+Una función anidada es una función definida dentro de otra función. Las funciones anidadas pueden acceder a las variables de su función contenedora y viceversa, lo que permite modularizar y organizar el código de manera más eficiente.
+
+```javascript
+function operacionesMatematicas(a, b) {
+  function suma() {
+    return a + b;
+  }
+
+  function resta() {
+    return a - b;
+  }
+
+  function producto() {
+    return a * b;
+  }
+
+  return {
+    suma: suma(),
+    resta: resta(),
+    producto: producto()
+  };
+}
+
+const resultado = operacionesMatematicas(5, 3);
+console.log(resultado.suma);     // 8
+console.log(resultado.resta);    // 2
+console.log(resultado.producto); // 15
+```
+En este ejemplo, operacionesMatematicas contiene tres funciones anidadas (suma, resta, y producto) que pueden acceder a las variables a y b de su función contenedora para realizar operaciones matemáticas.
+
+Estas son las definiciones y ejemplos básicos de cierres y funciones anidadas en JavaScript. Ambos conceptos son poderosos y se utilizan comúnmente para crear código modular y mantener datos privados en el ámbito de una función.
+
+
+
+
+
