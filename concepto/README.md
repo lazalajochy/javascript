@@ -816,3 +816,37 @@ console.log(persona.edad); // 25
 + La abstracción
 
 Trata de simplificar la complejidad del mundo real modelando objetos del mundo real como objetos en un programa de computadora. Esto implica identificar las características esenciales de un objeto y representarlas en forma de atributos y métodos. La abstracción permite crear modelos más simples y comprensibles de sistemas complejos.
+
+
+# Promesas y manejo asíncrono.
+
+Las promesas y el manejo asíncrono son conceptos fundamentales en JavaScript que se utilizan para trabajar con operaciones que toman tiempo, como la lectura de archivos, las solicitudes a servidores web o cualquier operación que no sea inmediata.
+
++ Promesas
+
+Una promesa es un objeto que representa el resultado de una operación asíncrona que puede estar en uno de los siguientes estados:
+
+Pendiente (pending): La operación aún no se ha completado.
+
+Resuelta (fulfilled): La operación se ha completado con éxito y ha devuelto un valor.
+
+Rechazada (rejected): La operación ha fallado y ha producido un error.
+
+Las promesas permiten escribir código más limpio y estructurado cuando se trabaja con operaciones asíncronas, ya que proporcionan una forma de manejar las respuestas exitosas y los errores de manera más elegante.
+
+```javascript
+const miPromesa = new Promise((resolve, reject) => {
+  // Simulando una operación asíncrona exitosa
+  setTimeout(() => {
+    resolve('Operación exitosa');
+  }, 2000);
+});
+
+miPromesa
+  .then((resultado) => {
+    console.log(resultado); // Imprime "Operación exitosa" después de 2 segundos
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+```
