@@ -614,6 +614,65 @@ En este ejemplo, operacionesMatematicas contiene tres funciones anidadas (suma, 
 Estas son las definiciones y ejemplos básicos de cierres y funciones anidadas en JavaScript. Ambos conceptos son poderosos y se utilizan comúnmente para crear código modular y mantener datos privados en el ámbito de una función.
 
 
+# arrow function vs function
 
+Las funciones normales y las funciones flecha (arrow functions) en JavaScript tienen diferencias clave en su sintaxis y en cómo manejan el valor de this.
 
+function
 
+Se definen utilizando la palabra clave function.
+
+Tienen un cuerpo de función delimitado por llaves {}.
+
+Pueden tener múltiples parámetros y declaraciones de retorno.
+
+```javascript
+function suma(a, b) {
+  return a + b;
+}
+```
+
+arrow function
+
+Se definen utilizando la sintaxis () => {}.
+
+Tienen un cuerpo de función implícito (sin necesidad de llaves) si solo contienen una expresión, que se convierte en el valor de retorno de la función.
+
+Suelen ser más concisas y expresivas.
+
+```javascript
+const suma = (a, b) => a + b;
+```
+
+This en funciones
+
+Tienen su propio valor de this, que depende de cómo se llama la función.
+
+El valor de this puede cambiar dinámicamente en función del contexto de ejecución.
+
+```javascript
+const objeto = {
+  valor: 42,
+  obtenerValor: function() {
+    return this.valor;
+  }
+};
+
+console.log(objeto.obtenerValor()); // 42
+
+```
+
+this en arrow function
+
+No tienen su propio valor de this. En cambio, heredan el valor de this del contexto en el que se crearon.
+
+```javascript
+const objeto = {
+  valor: 42,
+  obtenerValor: () => this.valor // "this" se hereda del contexto global
+};
+
+console.log(objeto.obtenerValor()); // undefined
+```
+
+En resumen, las funciones flecha son una forma más concisa de escribir funciones en JavaScript y son especialmente útiles cuando se desea mantener el valor de this del contexto circundante. Por otro lado, las funciones normales son más versátiles y pueden ser necesarias en situaciones donde se requiere un valor de this dinámico o se necesita un cuerpo de función más complejo.
