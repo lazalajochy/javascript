@@ -850,3 +850,24 @@ miPromesa
     console.error(error);
   });
 ```
+
++ Callback
+
+Una función de callback es una función que se pasa a otra función como un argumento, que luego se invoca dentro de la función externa para completar algún tipo de rutina o acción
+
+```javascript
+let names = ['juan', 'lucas','carlos'];
+
+function modofy(array, callback){
+    //se hace algo....
+    array.push('maria')
+
+    //despues de hacer ese aglo, se ejecuta el callback
+    callback()
+
+}
+
+modofy(names, function(){
+    console.log('se modificado el array')
+})
+```
