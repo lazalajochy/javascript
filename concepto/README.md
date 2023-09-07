@@ -871,3 +871,61 @@ modofy(names, function(){
     console.log('se modificado el array')
 })
 ```
+
+# callback vs promesa
+
+Las promesas y los callbacks son dos enfoques diferentes para manejar operaciones asíncronas en JavaScript.
+
++ callback
+
+Sintaxis: Los callbacks son funciones que se pasan como argumentos a una función que realiza una operación asíncrona. La sintaxis puede volverse anidada y compleja, especialmente cuando se tienen múltiples operaciones asíncronas que deben ejecutarse en secuencia o en paralelo.
+
+Legibilidad: En el caso de múltiples callbacks anidados (también conocido como "callback hell"), el código puede volverse difícil de leer y mantener, lo que se conoce como "callback hell" o "pyramid of doom".
+
+Manejo de errores: En un callback, generalmente debes manejar los errores dentro de la función de callback misma, lo que puede dificultar la gestión de errores globales o el manejo centralizado de errores.
+
+
+```javascript
+function hacerAlgo(callback) {
+  setTimeout(function() {
+    callback(null, 'Éxito');
+  }, 1000);
+}
+
+hacerAlgo(function(error, resultado) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log(resultado);
+  }
+});
+
+```
+
++ promesa
+
+Sintaxis: Las promesas son objetos que representan el resultado de una operación asíncrona. Proporcionan una sintaxis más limpia y estructurada en comparación con los callbacks, ya que permiten encadenar .then() para manejar el resultado exitoso y .catch() para manejar errores.
+
+Legibilidad: Las promesas permiten un código más legible y fácil de seguir, especialmente cuando se trata de múltiples operaciones asíncronas en secuencia.
+
+Manejo de errores: Las promesas tienen un manejo de errores más claro y centralizado a través del método .catch(). Esto facilita el manejo de errores en todas las partes de tu código.
+
+Encadenamiento: Las promesas son ideales para encadenar múltiples operaciones asíncronas en una secuencia específica, lo que se conoce como "promise chaining"
+
+```javascript
+function hacerAlgo() {
+  return new Promise(function(resolve, reject) {
+    setTimeout(function() {
+      resolve('Éxito');
+    }, 1000);
+  });
+}
+
+hacerAlgo()
+  .then(function(resultado) {
+    console.log(resultado);
+  })
+  .catch(function(error) {
+    console.error(error);
+  });
+```
